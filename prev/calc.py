@@ -1,28 +1,31 @@
-a=6
-b=0
-
-while(True):
-    print("1.add")
-    print("2.sub")
-    print("3.mul")
-    print("4.div")
-    print("0.exit")
-
-    n = int(input("Select yr choice"))
+while True:
+    print("1. +\n2. -\n3. *\n4. \\ \n5. !\n 6. press 0 for exit")
+    n = input("Select your choice")
     match n:
-        case 1:
-            print(a+b)
-        case 2:
-            print(a-b)
-        case 3:
-            print(a*b)
-        case 4:
-            if(b==0):
-                print("invalid no")
-            else:
-                print(1/b)
-        case 0:
-            exit(0)
+        case '+':
+            n1 = int(input("enter no 1 "))
+            n2 = int(input("enter no 2 "))
+            print(n1+n2)
+        case '-':
+              n1 = int(input("enter no 1 "))
+              n2 = int(input("enter no 2 "))
+              print(n1-n2)
+        case '*':
+                n1 = int(input("enter no 1 "))
+                n2 = int(input("enter no 2 "))
+                print(n1*n2)
+        case '/':
+                n1 = int(input("enter no 1 "))
+                n2 = int(input("enter no 2 "))
+                print(n1/n2)
+        case '!':
+                n1 = int(input("enter no "))
+                fact = 1
+                while(n1>0):
+                      fact = fact * n1
+                      n1 = n1-1
+                print(fact)
+        case '0':
+                exit(0)
         case _:
-            print("wrong choice")
-        
+                print("wrong choice entered")
